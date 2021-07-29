@@ -1,0 +1,53 @@
+Source YT : https://youtu.be/eLBZwInhTwY
+
+- Laravel Set up
+- Upgrade Composer ( biar terbaru )
+- Migration
+- Install Library (Laravel UI ) -> composer require laravel/ui ->>> WAJIB
+- Install Authentication use bootstrap -> php artisan ui bootstrap --auth 
+					  dapet dari php artisan
+
+- Timpa Route::get di web.php menjadi Route::get('/', [HomeController::class, 'index']);
+
+
+------------------------------------- Login ------------------------------------
+- Buat file v_login di view
+- Lalu ubah file di vendor->laravel->ui->paling atas lalu cari bagian 'auth.login'						
+ 				diganti dengan file login kita yg baru kita buat
+
+- Buat code v_login.blade.php
+- Tambahkan @error message di auth dan dicopy ke v_login dibagian bawah konfirmasi password
+- Mengedit Bagian home view
+- Ambil template app dari view layouts
+
+------------------------------------- Register ------------------------------------
+
+- Tambahkan tag <a></a> register di login.blade.php 
+- Lalu tambahkan dibagian href="{{ route('register')}}"
+- Copas code register yang bawaan auth laravel dan ubaj code
+- Cari vendor->laravel->ui->registerUser lalu ganti bagian 'auth.register' menjadi file
+							yang baru kita buat
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------Yang wajib diganti antaralain:
+1.home.blade.php (views)
+2.Buat file v_login yg sudah dijelaskan diatas.
+3.dashboard.blade.php (views) 
+
+
+------------------------------------------------------ Jalan kerja
+-> auth(login/register) -> (dashboard) -> home 
+
+------------------------------------------------------ COMPONENT
+-> Login ->
+	- Email & Password
+-> Register -> 
+	- Name & Email & Password
